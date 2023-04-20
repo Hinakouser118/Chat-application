@@ -4,7 +4,7 @@ import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
-const projectID = '1b7801d6-8a66-4be4-a442-89219d833dfc';
+const projectID = '52678c8c-bcd7-4385-8439-dc0b1e6ef521';
 
 const App = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
@@ -13,8 +13,8 @@ const App = () => {
     <ChatEngine
       height="100vh"
       projectID={projectID}
-      userName={localStorage.getItem('username')}
-      userSecret={localStorage.getItem('password')}
+      userName="Hina"
+      userSecret="123456"
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
